@@ -368,8 +368,10 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="FpsController.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RichText.cpp" />
     <ClCompile Include="SpriteTransformProvider.cpp" />
     <ClCompile Include="Text.cpp" />
   </ItemGroup>
@@ -490,6 +492,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="BackGround.h" />
     <ClInclude Include="extlibs\include\SFML\Audio.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\AlResource.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\Export.hpp" />
@@ -589,6 +592,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="extlibs\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="extlibs\include\SFML\Window\WindowStyle.hpp" />
     <ClInclude Include="FpsController.h" />
+    <ClInclude Include="RichText.h" />
     <ClInclude Include="SpriteTransformProvider.h" />
     <ClInclude Include="Text.h" />
   </ItemGroup>
