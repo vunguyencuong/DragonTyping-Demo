@@ -1,17 +1,19 @@
 #pragma once
 #include<SFML/Graphics.hpp>
-#include<string>
+#include"GameObject.h"
 using namespace std;
-class BackGround
+class BackGround : public GameObject
 {
-	sf::Vector2f dim;
-	
-	sf::Sprite temp;
-	void move(float speed);
-public :
-	BackGround(string path);
-	sf::Sprite bg1;
-	sf::Sprite bg2;
-	sf::Sprite background(float speed);
-};
+	sf::Sprite bgSprite[2];
+	sf::Texture bg;
+	float speed;
 
+public :
+	BackGround(string path, float speed);
+
+	float getSpeed();
+	void setSpeed(float speed);
+
+	virtual void update();
+	virtual void render(sf::RenderWindow& window);
+};

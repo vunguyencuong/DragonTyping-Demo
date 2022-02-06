@@ -11,6 +11,7 @@ class Animation
 	int frameCount;
 	int delay;
 public:
+	Animation() {};
 	Animation(const vector<sf::IntRect> &spriteTransforms, sf::Texture &texture, int delay);
 
 	sf::Sprite getNextSprite();

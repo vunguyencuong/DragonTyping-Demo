@@ -24,3 +24,14 @@ SpriteTransformProvider::SpriteTransformProvider()
     }
 }
 
+SpriteTransformProvider* SpriteTransformProvider::instance = nullptr;
+
+SpriteTransformProvider* SpriteTransformProvider::getInstance()
+{
+    if (instance == nullptr)
+    {
+        instance = new SpriteTransformProvider();
+    }
+
+    return instance;
+}

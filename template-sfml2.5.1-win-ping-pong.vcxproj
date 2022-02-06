@@ -369,11 +369,17 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="BackGround.cpp" />
+    <ClCompile Include="Dragon.cpp" />
     <ClCompile Include="FpsController.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PassageProvider.cpp" />
+    <ClCompile Include="ReplayGame.cpp" />
     <ClCompile Include="RichText.cpp" />
     <ClCompile Include="SpriteTransformProvider.cpp" />
+    <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Typing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="extlibs\bin\x64\openal32.dll" />
@@ -493,6 +499,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="BackGround.h" />
+    <ClInclude Include="Dragon.h" />
     <ClInclude Include="extlibs\include\SFML\Audio.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\AlResource.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\Export.hpp" />
@@ -592,15 +599,24 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="extlibs\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="extlibs\include\SFML\Window\WindowStyle.hpp" />
     <ClInclude Include="FpsController.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="PassageProvider.h" />
+    <ClInclude Include="ReplayGame.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="RichText.h" />
     <ClInclude Include="SpriteTransformProvider.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="Text.h" />
+    <ClInclude Include="Typing.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="resources\ball.wav" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\sansation.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="template-sfml2.5.1-win-ping-pong.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

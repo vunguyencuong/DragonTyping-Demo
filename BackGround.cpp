@@ -1,45 +1,55 @@
+
 #include "BackGround.h"
+#include <iostream>
 
-void BackGround::move(float speed)
+BackGround::BackGround(string path, float speed)
 {
-	sf::Vector2f oldPos = bg1.getPosition();
-	bg1.setPosition(oldPos.x - speed, oldPos.y);
+	this->speed = speed;
 
-	oldPos = bg2.getPosition();
-	bg2.setPosition(oldPos.x - speed, oldPos.y);
-}
-
-BackGround::BackGround(string path)
-{
-	sf::Texture bg;
 	bg.loadFromFile(path);
 
-	bg1.setTexture(bg);
-	bg2.setTexture(bg);
+	bgSprite[0].setTexture(bg);
+	bgSprite[1].setTexture(bg);
 
 
-	//dim = sf::Vector2f(bg1.getLocalBounds().width, bg1.getLocalBounds().height);
+	w = bgSprite[0].getLocalBounds().width;
+	h = bgSprite[0].getLocalBounds().height;
 
-	//temp = bg1;
-	//bg1.setPosition(0, 0);
-	//bg2.setPosition(1000, 0);
+	for (int i = 0; i < 2; i++)
+	{
+		bgSprite[i].setPosition(i * w, 0);
+	}
+	
 }
 
-sf::Sprite BackGround::background(float speed)
+float BackGround::getSpeed()
 {
-	/*move(speed);
+	return speed;
+}
 
-	if (bg1.getPosition().x <= -dim.x)
+void BackGround::setSpeed(float speed)
+{
+	this->speed = speed;
+}
+
+void BackGround::update()
+{
+	for (int i = 0; i < 2; i++)
 	{
-		temp = bg2;
-		bg1.setPosition(1000.f, bg1.getPosition().y);
+		sf::Vector2f oldPos = bgSprite[i].getPosition();
+		bgSprite[i].setPosition(oldPos.x - speed, oldPos.y);
 	}
+}
 
-	if (bg2.getPosition().x <= -dim.x)
+void BackGround::render(sf::RenderWindow& window)
+{
+	for (int i = 0; i < 2; i++)
 	{
-		temp = bg1;
-		bg2.setPosition(1000.f, bg2.getPosition().y);
-	}*/
+		if (bgSprite[i].getPosition().x <= -w)
+		{
+			bgSprite[i].setPosition(w, bgSprite[i].getPosition().y);
+		}
 
-	return bg1;
+		window.draw(bgSprite[i]);
+	}
 }
