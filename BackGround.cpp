@@ -2,11 +2,11 @@
 #include "BackGround.h"
 #include <iostream>
 
-BackGround::BackGround(string path, float speed)
+BackGround::BackGround()
 {
-	this->speed = speed;
+	speed = 2.f;
 
-	bg.loadFromFile(path);
+	bg.loadFromFile("E:/Game/BackGround.png");
 
 	bgSprite[0].setTexture(bg);
 	bgSprite[1].setTexture(bg);
@@ -41,7 +41,7 @@ void BackGround::update()
 	}
 }
 
-void BackGround::render(sf::RenderWindow& window)
+void BackGround::render(sf::RenderWindow* window)
 {
 	for (int i = 0; i < 2; i++)
 	{
@@ -50,6 +50,6 @@ void BackGround::render(sf::RenderWindow& window)
 			bgSprite[i].setPosition(w, bgSprite[i].getPosition().y);
 		}
 
-		window.draw(bgSprite[i]);
+		window->draw(bgSprite[i]);
 	}
 }

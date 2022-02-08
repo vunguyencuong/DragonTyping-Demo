@@ -10,5 +10,7 @@ protected:
 public:
 	virtual void update() {};
 
-	virtual void render(sf::RenderWindow& window) {};
+	virtual void render(sf::RenderWindow* window) {};
+
+	~GameObject();
 };

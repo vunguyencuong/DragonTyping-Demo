@@ -8,12 +8,12 @@ class BackGround : public GameObject
 	sf::Texture bg;
 	float speed;
 
-public :
-	BackGround(string path, float speed);
+public:
+	BackGround();
 
 	float getSpeed();
 	void setSpeed(float speed);
 
 	virtual void update();
-	virtual void render(sf::RenderWindow& window);
+	virtual void render(sf::RenderWindow* window);
 };

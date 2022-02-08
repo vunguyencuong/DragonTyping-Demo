@@ -23,7 +23,7 @@ class Dragon : public GameObject, Subscriber
 public:
 	Dragon();
 	virtual void update();
-	virtual void render(sf::RenderWindow& window);
+	virtual void render(sf::RenderWindow* window);
 	virtual void notify(Publisher* publisher);
 
 	void setStreak(int streak);

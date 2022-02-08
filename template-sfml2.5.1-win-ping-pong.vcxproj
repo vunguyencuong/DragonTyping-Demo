@@ -370,15 +370,18 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="Dragon.cpp" />
-    <ClCompile Include="FpsController.cpp" />
+    <ClCompile Include="EndScene.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameScore.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PassageProvider.cpp" />
-    <ClCompile Include="ReplayGame.cpp" />
+    <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="RichText.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteTransformProvider.cpp" />
     <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="Typing.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -500,6 +503,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="BackGround.h" />
     <ClInclude Include="Dragon.h" />
+    <ClInclude Include="EndScene.h" />
     <ClInclude Include="extlibs\include\SFML\Audio.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\AlResource.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\Export.hpp" />
@@ -598,15 +602,17 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="extlibs\include\SFML\Window\Window.hpp" />
     <ClInclude Include="extlibs\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="extlibs\include\SFML\Window\WindowStyle.hpp" />
-    <ClInclude Include="FpsController.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameScore.h" />
     <ClInclude Include="PassageProvider.h" />
-    <ClInclude Include="ReplayGame.h" />
+    <ClInclude Include="PlayScene.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RichText.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteTransformProvider.h" />
     <ClInclude Include="Observer.h" />
-    <ClInclude Include="Text.h" />
+    <ClInclude Include="StartScene.h" />
     <ClInclude Include="Typing.h" />
   </ItemGroup>
   <ItemGroup>

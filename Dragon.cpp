@@ -32,7 +32,7 @@ void Dragon::update()
 		relativeSpeed = 1;
 		if (streak >= 20 && streak < 25) relativeSpeed = -1;
 		if (streak >= 25 && streak < 30) relativeSpeed = 1;
-		if (streak >= 30 && streak < 35) relativeSpeed = -1;
+		if (streak >= 30 && streak < 35) relativeSpeed = 2;
 	}
 	if (streak >= 5 && streak < 15)
 	{
@@ -53,12 +53,12 @@ void Dragon::update()
 	x += relativeSpeed;
 }
 
-void Dragon::render(sf::RenderWindow &window)
+void Dragon::render(sf::RenderWindow* window)
 {
 	sf::Sprite s = animations[currentState].getNextSprite();
 
 	s.setPosition(x, y);
-	window.draw(s);
+	window->draw(s);
 }
 
 void Dragon::notify(Publisher* publisher)

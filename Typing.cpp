@@ -3,8 +3,8 @@
 
 Typing::Typing(std::string passage, std::string fontFile, int fontSize)
 {
-	x = 300;
-	y = 500;
+	x = 500;
+	y = 525;
 
 	this->passage = passage;
 	this->streak = 0;
@@ -13,17 +13,22 @@ Typing::Typing(std::string passage, std::string fontFile, int fontSize)
 	text.setFont(font);
 	text.setCharacterSize(fontSize);
 	text << sf::Color::White << passage;
+
+	/*bg2.loadFromFile("E:/Game/mbg7.png");
+	bkg2.setTexture(bg2);*/
 }
 
 void Typing::update()
 {
-	x -= 1;
+
 }
 
-void Typing::render(sf::RenderWindow& window)
+void Typing::render(sf::RenderWindow* window)
 {
+	/*bkg2.setPosition(0, 500);
+	window->draw(bkg2);*/
 	text.setPosition(x, y);
-	window.draw(text);
+	window->draw(text);
 }
 
 void Typing::setPosition(float x, float y)
@@ -46,6 +51,7 @@ void Typing::onKeyPressed(sf::Event& e)
 {
 	sf::Keyboard::Key key;
 	char curChar = passage[id];
+
 	if (curChar == ' ')
 		key = sf::Keyboard::Space;
 	else if ('a' <= curChar && curChar <= 'z')
@@ -70,6 +76,9 @@ void Typing::onKeyPressed(sf::Event& e)
 		streak = -1;
 	}
 	id++;
+
+	// update  x position
+	x -= 12;
 
 	callNotify();
 }
